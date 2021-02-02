@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/layout_register"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="15dp">
+    <include
+        android:id="@+id/include_upper2"
+        layout="@layout/include_main_upper2"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/orange" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:background="@null"
+            app:srcCompat="@drawable/common_back" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/register_not_underline3"
+            android:textSize="20dp"
+            android:layout_gravity="center_vertical"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/orange" />
+
+    <ScrollView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tb_id">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:gravity="center">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/user_profile"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/profile_boy">
+                </de.hdodenhof.circleimageview.CircleImageView>
+            </TableRow>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textSize="13sp"
+                android:textColor="@color/black"
+                android:background="@null"
+                android:gravity="center"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/orange"
+                android:layout_marginTop="5dp"/>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/editText_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:layout_weight="3"
+                    android:inputType="text"
+                    android:textSize="22sp"
+                    android:hint="@string/name"
+                    android:background="@null"/>
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/orange" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/editText_nickName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:layout_weight="3"
+                    android:inputType="text"
+                    android:textSize="22sp"
+                    android:hint="@string/nick_name"
+                    android:background="@null"/>
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/orange" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/editText_phoneNum"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:layout_weight="3"
+                    android:textSize="22sp"
+                    android:inputType="phone"
+                    android:background="@null"
+                    android:hint="@string/phone_num"/>
+
+                <Button
+                    android:id="@+id/btn_certification"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:text="@string/certification"
+                    android:backgroundTint="@color/orange"
+                    android:textColor="@color/black"/>
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/orange" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/editText_confirm"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:layout_weight="3"
+                    android:textSize="22sp"
+                    android:inputType="number"
+                    android:background="@null"
+                    android:hint="@string/certification_num"/>
+
+                <LinearLayout
+                    android:id="@+id/layout_timer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:padding="5dp"
+                    android:orientation="horizontal"
+                    android:visibility="invisible">
+
+                    <TextView
+                        android:id="@+id/textView_timer_remain"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:inputType="text"
+                        android:background="@null"
+                        android:text="남은시간"
+                        android:layout_marginRight="10dp"
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:id="@+id/textView_timer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:inputType="text"
+                        android:background="@null"
+                        android:text="05:00"
+                        android:textColor="@color/red"/>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_confirm"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:text="@string/confirm"
+                    android:backgroundTint="@color/orange"
+                    android:textColor="@color/black"/>
+            </TableRow>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/orange" />
+
+            <View
+                android:id="@+id/view6"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:background="@color/grey" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/orange" />
+
+            <TextView
+                android:id="@+id/textview_first_day_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:textSize="17sp"
+                android:text="@string/first_day"
+                android:textColor="@color/black"
+                android:background="@null"/>
+            <TextView
+                android:id="@+id/textview_first_day"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:layout_weight="3"
+                android:textSize="22sp"
+                android:inputType="number"
+                android:background="@null"
+                android:hint="@string/first_day"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/orange" />
+
+            <TableRow
+                android:layout_marginTop="20dp">
+                <TextView
+                    android:id="@+id/textView_private_info"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:layout_weight="3"
+                    android:textSize="17sp"
+                    android:inputType="number"
+                    android:textColor="@color/red"
+                    android:hint="@string/private_info"/>
+                <CheckBox
+                    android:id="@+id/checkbox_private_info"
+                    />
+            </TableRow>
+
+
+            <Button
+                android:id="@+id/btn_registerComplete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/register_complete3"
+                android:backgroundTint="@color/grey"
+                android:textColor="@color/black"/>
+        </TableLayout>
+    </ScrollView>
+</LinearLayout>
+
+
+    <!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/tb_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/include_upper2"
+            layout="@layout/include_main_upper2" />
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="28dp"
+            android:background="@color/orange"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/include_upper2" />
+
+        <EditText
+            android:id="@+id/editTextText_emailAddress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint=" 메일주소"
+            android:inputType="textEmailAddress"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view1" />
+
+        <Button
+            android:id="@+id/btn_check_duplication"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:backgroundTint="@color/orange"
+            android:text="@string/double_check"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/textView_requirement1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@+id/view1" />
+
+        <TextView
+            android:id="@+id/textView_requirement1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/necessary_info"
+            android:textColor="@color/red"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextText_emailAddress" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/orange"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_requirement1" />
+
+
+        <EditText
+            android:id="@+id/editText_pw"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:background="@null"
+            android:ems="10"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view2"/>
+
+        <TextView
+            android:id="@+id/textView_requirement2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/necessary_info"
+            android:textColor="@color/red"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText_pw"/>
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/orange"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_requirement2"/>
+
+        <EditText
+            android:id="@+id/editText_pw_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:ems="10"
+            android:hint="@string/password_confirm"
+            android:inputType="textPassword"
+            android:textSize="22sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view3"/>
+
+        <TextView
+            android:id="@+id/textView_requirement3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/necessary_info"
+            android:textColor="@color/red"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText_pw_confirm"/>
+
+        <View
+            android:id="@+id/view4"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/orange"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_requirement3"/>
+
+        <View
+            android:id="@+id/view5"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="@color/grey"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view4"/>
+
+        <View
+            android:id="@+id/view6"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/orange"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view5"/>
+
+        <EditText
+            android:id="@+id/editText_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:ems="10"
+            android:hint="@string/name"
+            android:inputType="text"
+            android:textSize="22sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view6"/>
+
+        <View
+            android:id="@+id/view7"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/orange"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText_name"/>
+
+        <EditText
+            android:id="@+id/editText_nickName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:ems="10"
+            android:hint="@string/nick_name"
+            android:inputType="text"
+            android:textSize="22sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view7"/>
+
+        <View
+            android:id="@+id/view8"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/orange"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText_nickName"/>
+
+        <EditText
+            android:id="@+id/editText_phoneNum"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:ems="10"
+            android:hint="@string/phone_num"
+            android:inputType="phone"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view8"/>
+
+        <Button
+            android:id="@+id/btn_certification"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/orange"
+            android:text="@string/certification"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@id/guideline2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view8"/>
+
+        <View
+            android:id="@+id/view9"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/orange"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_certification"/>
+
+        <EditText
+            android:id="@+id/editText_confirm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="@string/certification_num"
+            android:inputType="textEmailAddress"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view9" />
+
+        <Button
+            android:id="@+id/btn_confirm"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/orange"
+            android:text="@string/confirm"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@id/guideline2"
+            app:layout_constraintTop_toBottomOf="@+id/btn_certification" />
+
+        <View
+            android:id="@+id/view10"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/orange"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_confirm"/>
+
+        <View
+            android:id="@+id/view11"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="@color/grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view10"/>
+
+        <View
+            android:id="@+id/view12"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/orange"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view11"/>
+
+        <TextView
+            android:id="@+id/textView_invitation_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/inv_code"
+            android:textSize="22sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view12"/>
+
+        <View
+            android:id="@+id/view13"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/orange"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_invitation_code"/>
+
+        <EditText
+            android:id="@+id/editText_opponentInvCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:ems="10"
+            android:hint="@string/opponent_inv_code"
+            android:inputType="number"
+            android:textSize="22sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view13"/>
+
+        <View
+            android:id="@+id/view14"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/orange"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText_opponentInvCode"/>
+
+        <Button
+            android:id="@+id/btn_registerComplete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/orange"
+            android:text="@string/register_complete"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view14"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="316dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>-->

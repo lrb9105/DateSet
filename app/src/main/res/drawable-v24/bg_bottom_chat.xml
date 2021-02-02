@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <selector xmlns:android="http://schemas.android.com/apk/res/android">
+        <!--버튼 눌리기전-->
+        <item android:drawable="@drawable/bottom_chat_unclicked" />
+        <!--버튼 눌렸을 때-->
+        <item
+            android:state_pressed="true"
+            android:drawable="@drawable/bottom_chat_clicked" />
+        <item
+            android:state_focused="true"
+            android:drawable="@drawable/bottom_chat_clicked" />
+    </selector>
+</selector>

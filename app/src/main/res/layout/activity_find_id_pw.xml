@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/layout_find_id_pw"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/include_upper2"
+        layout="@layout/include_main_upper2"></include>
+
+    <ImageButton
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include_upper2"
+        app:srcCompat="?attr/actionModeCloseDrawable" />
+
+    <!--아이디 찾기-->
+    <TextView
+        android:id="@+id/textView_find_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="@string/find_id"
+        android:textColor="@color/orange"
+        android:textSize="20sp"
+        android:layout_gravity="center"/>
+
+    <EditText
+        android:id="@+id/editText_name"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/orange"
+        android:ems="10"
+        android:hint="@string/name"
+        android:inputType="text"
+        android:textAlignment="center"
+        android:layout_gravity="center" />
+
+    <EditText
+        android:id="@+id/editText_phoneNum"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/orange"
+        android:ems="10"
+        android:hint="@string/phone_num"
+        android:inputType="phone"
+        android:textAlignment="center"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:id="@+id/btn_find_id"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/orange"
+        android:text="@string/find_id"
+        android:textColor="@color/black"
+        android:layout_gravity="center"/>
+
+
+    <!--비밀번호 찾기-->
+
+    <TextView
+        android:id="@+id/textView_find_pw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:text="@string/find_pw"
+        android:textColor="@color/orange"
+        android:textSize="20sp"
+        android:layout_gravity="center" />
+
+    <EditText
+        android:id="@+id/editText_email"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/orange"
+        android:ems="10"
+        android:hint="@string/email_id"
+        android:inputType="textEmailAddress"
+        android:textAlignment="center"
+        android:layout_gravity="center" />
+
+    <EditText
+        android:id="@+id/editText_phone_num2"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/orange"
+        android:ems="10"
+        android:hint="@string/phone_num"
+        android:inputType="phone"
+        android:textAlignment="center"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:id="@+id/btn_find_pw"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/orange"
+        android:text="@string/find_pw"
+        android:textColor="@color/black"
+        android:layout_gravity="center" />
+
+    <EditText
+        android:id="@+id/editText_tempPw"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/orange"
+        android:ems="10"
+        android:background="@null"
+        android:inputType="text"
+        android:textAlignment="center"
+        android:layout_gravity="center"/>
+</LinearLayout>

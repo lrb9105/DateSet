@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/user1_profile"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:src="@drawable/home_heart">
+            </de.hdodenhof.circleimageview.CircleImageView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="2">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="우리커플"
+                android:textAlignment="center"
+                android:layout_gravity="center">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/textView_first_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="365일째"
+                android:textSize="25dp"
+                android:textAlignment="center"
+                android:layout_gravity="center">
+            </TextView>
+
+            <TextView
+                android:id="@+id/nickName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="닉네임1 ❤ 닉네임2"
+                android:textSize="13dp"
+                android:textAlignment="center"
+                android:layout_gravity="center">
+            </TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/user2_profile"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:src="@drawable/home_heart">
+            </de.hdodenhof.circleimageview.CircleImageView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:id="@+id/back_img"
+            android:layout_width="match_parent"
+            android:layout_height="540dp"
+            android:src="@drawable/profile_back_img"
+            android:scaleType="center"></ImageView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="400dp">
+
+            <Button
+                android:id="@+id/btn_find_restaurant"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:text="맛집찾기"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/background_circular_btn"
+                android:layout_marginLeft="5dp"></Button>
+            <Button
+                android:id="@+id/btn_calendar"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:text="캘린더"
+                android:background="@drawable/background_circular_btn"
+                android:layout_marginRight="10dp"></Button>
+            <Button
+                android:id="@+id/btn_weather"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:text="날씨검색"
+                android:background="@drawable/background_circular_btn"
+                android:layout_marginRight="10dp"></Button>
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <include
+        android:id="@+id/include_bottom"
+        layout="@layout/include_main_bottom"></include>
+</LinearLayout>
