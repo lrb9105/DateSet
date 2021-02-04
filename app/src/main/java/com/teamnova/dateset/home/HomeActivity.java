@@ -144,6 +144,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
         // 로딩바
         //로딩창 객체 생성
         customProgressDialog = new ProgressLoadingDialog(this);
@@ -153,6 +154,12 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         // 유저정보 가져오기 - 어떤 액티비티에서도 사용할 수 있음.
         Intent intent = getIntent();
         userInfo = (UserDto)intent.getSerializableExtra("USER_INFO");
+
+        // 로그인화면에서 넘어오지 않은 경우
+        if(userInfo == null){
+            userInfo = new UserDto("HiBhji2bamfJqunEWZ8MzuEMV5J2", "leeryon9105@naver.com", "!asdf1234A", "-MRx3Scy4jdCoRPNMIoY");
+            userInfo.setSharedKey("-MRx3xoz36q-9FgO7v1O");
+        }
 
         // SharedKey 객체 가져오기
         String sharedKeyId = userInfo.getSharedKey();

@@ -230,7 +230,14 @@ public class ModifyScheduleActivity extends AppCompatActivity implements View.On
         String startDate = scheduleDto.getFirstDate(); //yyyy년 mm월 dd일
         startYear = Integer.parseInt(startDate.substring(0,4));
         startMonth = Integer.parseInt(startDate.substring(6,8));
-        startDay = Integer.parseInt(startDate.substring(10,12));
+        String srtDayStr = startDate.substring(10,12);
+        if(srtDayStr.contains(":")){
+            startDay = Integer.parseInt(startDate.substring(10,11));
+        } else{
+            startDay = Integer.parseInt(startDate.substring(10,12));
+        }
+
+
 
         // 종료날짜
         String endDate = scheduleDto.getEndDate();

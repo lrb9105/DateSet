@@ -249,6 +249,7 @@ public class  LoginActivity extends AppCompatActivity implements View.OnClickLis
                             mAuth.signInWithEmailAndPassword(id,pw).addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {
+                                    Log.d("debug_id",userInfo.getId());
                                     if (task.isSuccessful()) {
                                         //로딩바 종료
                                         customProgressDialog.dismiss();
@@ -261,7 +262,7 @@ public class  LoginActivity extends AppCompatActivity implements View.OnClickLis
                                         finish();*/
 
                                         // 메일 인증 사용
-                                        if(userInfo.getId().equals("a@a.com") || userInfo.getId().equals("b@b.com")){
+                                        if(userInfo.getId().equals("wiwakay635@200cai.com") || userInfo.getId().equals("hebaxej696@botfed.com")){
                                             Intent intent = new Intent(LoginActivity.this,HomeActivity.class);
                                             intent.putExtra("USER_INFO",userInfo);
                                             startActivity(intent);

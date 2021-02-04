@@ -24,6 +24,8 @@ public class SendNotification {
                     JSONObject dataJson = new JSONObject();
                     dataJson.put("body", message);
                     dataJson.put("title", title);
+                    dataJson.put("android_channel_id", "333333");
+                    dataJson.put("click_action", "com.teamnova.dateset.chatting");
                     json.put("notification", dataJson);
                     json.put("to", regToken);
                     RequestBody body = RequestBody.create(JSON, json.toString());

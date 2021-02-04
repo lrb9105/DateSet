@@ -106,7 +106,13 @@
         <activity android:name=".addedfunc.weather.WeatherActivity" />
         <activity
             android:name=".chatting.chatting.ChattingActivity"
-            android:windowSoftInputMode="adjustResize" />
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="com.teamnova.dateset.chatting"/>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
         <activity
             android:name=".post_writing.comment.CommentActivity"
             android:windowSoftInputMode="adjustUnspecified" />

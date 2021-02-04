@@ -48,6 +48,9 @@ public class MyFirebaseMessagingService extends com.google.firebase.messaging.Fi
 
     public void onMessageReceived(RemoteMessage remoteMessage) {
         super.onMessageReceived(remoteMessage);
+
+        Log.d("debug_msg","1111");
+
         sendNotification(remoteMessage.getNotification().getTitle(), remoteMessage.getNotification().getBody());
     }
 

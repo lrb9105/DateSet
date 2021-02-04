@@ -62,7 +62,7 @@ public class AlarmReceiver extends BroadcastReceiver {
 
         intent = new Intent(context, HomeActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-        pendingIntent = PendingIntent.getBroadcast(context, 0, intent, 0);
+        pendingIntent = PendingIntent.getActivity(context, 0, intent, 0);
 
         notificationManager = NotificationManagerCompat.from(context);
 

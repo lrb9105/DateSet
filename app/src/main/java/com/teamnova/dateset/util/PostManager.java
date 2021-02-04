@@ -23,7 +23,7 @@ public class PostManager {
      *      1) post: 게시물 객체
      * */
     public PostDto writePost(String id, String writer,ArrayList<String> imgList, String textContent, String place, String weather) {
-        SimpleDateFormat format1 = new SimpleDateFormat ( "YYYY.MM.DD");
+        SimpleDateFormat format1 = new SimpleDateFormat ( "yyyy.MM.dd");
         String date = format1.format(new Date());
 
         PostDto post = new PostDto(id,writer,textContent,place,weather,date);
